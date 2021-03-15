@@ -32,11 +32,11 @@ body {
    background: white;
    padding: 20px;
    border-radius: 10px;
-   height: 590px;
-   width: 920px;
+   height: 580px;
+   width: 500px;
    display: flex;
    flex-direction: column;
-   grid-gap: 1rem;
+   grid-gap: 3rem;
    grid-template-columns: 400px 1fr;
    background-position: 1260% 65%;
 }
@@ -47,8 +47,13 @@ body {
 
 .faq-title {
    margin-top: 40px;
+   margin: 1.4rem 0rem;
+   font-weight: 400;
+   font-size: 1.2rem;
    display: flex;
    flex-direction: column;
+   color: var(--veryDarkGreyBlue);
+   transition: 0.3s;
 }
 
 .faq {
@@ -74,4 +79,12 @@ body {
    top: -10px;
    left: -30px;
    transform: rotateY(180deg);
+}
+
+.faq-toggle {
+   cursor: pointer;
+   border: none;
+   background: none;
+   color: var(--softRed);
+   outline: 0;
 }

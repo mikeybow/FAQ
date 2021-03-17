@@ -20,7 +20,6 @@ body {
    font-family: "Muli", sans-serif;
    background-color: #f0f0f0;
    margin: 0;
-   height: 100vh;
    width: 100vw;
    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
    display: grid;
@@ -32,17 +31,19 @@ body {
    background: white;
    padding: 20px;
    border-radius: 10px;
-   height: 580px;
    width: 500px;
    display: flex;
    flex-direction: column;
-   grid-gap: 3rem;
    grid-template-columns: 400px 1fr;
    background-position: 1260% 65%;
 }
 
 .faq-text {
    display: none;
+}
+
+.faq.active .faq-text {
+   display: block;
 }
 
 .faq-title {
@@ -86,5 +87,25 @@ body {
    border: none;
    background: none;
    color: var(--softRed);
+}
+
+.faq-toggle:focus {
    outline: 0;
+}
+
+.faq-toggle .fa-times {
+   display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+   display: block;
+   color: white;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+   display: none;
+}
+
+.faq.active .faq-toggle {
+   background-color: var(--darkGreyBlue);
 }
